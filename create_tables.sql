@@ -21,8 +21,11 @@ CREATE TABLE BooksAuthors (
 
 CREATE TABLE Copies(
     Id INT NOT NULL IDENTITY(1,1),
-    amount INT NULL,
-    PRIMARY KEY(Id)
+    BookId INT NOT NULL,
+    PersonId INT NULL,
+    PRIMARY KEY(Id),
+    FOREIGN KEY (BookId) REFERENCES Books(Id),
+    FOREIGN KEY (PersonId) REFERENCES Person(Id)
 );
 
 CREATE TABLE Person(
@@ -33,9 +36,3 @@ CREATE TABLE Person(
     PRIMARY KEY(Id)
 )
 
-CREATE TABLE BooksCopies(
-    BookId INT NOT NULL,
-    CopyId INT NOT NULL,
-    FOREIGN KEY (BookId) REFERENCES Books(Id),
-    FOREIGN KEY (CopyId) REFERENCES Copies(Id)
-);

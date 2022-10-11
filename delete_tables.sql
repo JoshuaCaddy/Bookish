@@ -1,5 +1,5 @@
-Drop Table Authors;
+Drop Table Copies;
+Drop Table BooksAuthor;
+Drop Table Person;
 Drop Table Books;
-Drop TABLE BooksAuthors;
-Drop TABLE BooksCopies;
-Drop TABLE BookLoans;
+Drop Table Authors;
