@@ -1,0 +1,13 @@
+
+CREATE TABLE Authors (
+    Id INT NOT NULL IDENTITY(1, 1),
+    Name VARCHAR(70) NOT NULL,
+    Country VARCHAR(100) NOT NULL,
+    PRIMARY KEY(Id)
+);
+
+CREATE TABLE Books (
+    Id INT NOT NULL IDENTITY(1, 1),
+    Title VARCHAR(50) NOT NULL,
+    PRIMARY KEY(Id)
+);
